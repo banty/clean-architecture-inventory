@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MediatR" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Common\" />
+    <None Remove="Identity\" />
+    <None Remove="Microsoft.Extensions.Identity.Core" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Microsoft.AspNetCore.Authorization" />
+    <None Remove="Persistance\" />
+    <None Remove="Persistance\Configurations\" />
+    <None Remove="Persistance\Interceptors\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Persistance\Migrations\" />
+    <None Remove="Services\" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+    <None Remove="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.13" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Persistance\" />
+    <Folder Include="Persistance\Configurations\" />
+    <Folder Include="Persistance\Interceptors\" />
+    <Folder Include="Persistance\Migrations\" />
+    <Folder Include="Services\" />
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureInventory.Catalog.Application\CleanArchitectureInventory.Catalog.Application.csproj" />
+  </ItemGroup>
+</Project>
