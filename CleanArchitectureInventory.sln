@@ -1,0 +1,59 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{30EBA2FF-4156-48B8-A711-8994F00028DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureInventory.Catalog.Domain", "CleanArchitectureInventory.Catalog.Domain\CleanArchitectureInventory.Catalog.Domain.csproj", "{D5D9CC18-C5A7-4E90-970E-8941DB7FF103}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureInventory.Catalog.Application", "CleanArchitectureInventory.Catalog.Application\CleanArchitectureInventory.Catalog.Application.csproj", "{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureInventory.Catalog.Infrastructure", "CleanArchitectureInventory.Catalog.Infrastructure\CleanArchitectureInventory.Catalog.Infrastructure.csproj", "{A1CE7703-40BC-4EA0-9542-5AE875EBC53E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitectureInventory.Catalog.API", "CleanArchitectureInventory.Catalog.API\CleanArchitectureInventory.Catalog.API.csproj", "{AE9218F5-6DF7-4301-B0A0-E9438F12CF83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5D9CC18-C5A7-4E90-970E-8941DB7FF103}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5D9CC18-C5A7-4E90-970E-8941DB7FF103}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5D9CC18-C5A7-4E90-970E-8941DB7FF103}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5D9CC18-C5A7-4E90-970E-8941DB7FF103}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF639247-19C4-47C5-9506-C3D8EA77FCC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF639247-19C4-47C5-9506-C3D8EA77FCC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF639247-19C4-47C5-9506-C3D8EA77FCC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF639247-19C4-47C5-9506-C3D8EA77FCC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CE7703-40BC-4EA0-9542-5AE875EBC53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CE7703-40BC-4EA0-9542-5AE875EBC53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CE7703-40BC-4EA0-9542-5AE875EBC53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CE7703-40BC-4EA0-9542-5AE875EBC53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9218F5-6DF7-4301-B0A0-E9438F12CF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9218F5-6DF7-4301-B0A0-E9438F12CF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9218F5-6DF7-4301-B0A0-E9438F12CF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9218F5-6DF7-4301-B0A0-E9438F12CF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2ADFBCA-0703-4BD7-A986-D644A58EAEEA}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A6309B9-76E1-4A39-9C8C-391ABE83A8D3} = {30EBA2FF-4156-48B8-A711-8994F00028DC}
+		{D5D9CC18-C5A7-4E90-970E-8941DB7FF103} = {0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}
+		{CF639247-19C4-47C5-9506-C3D8EA77FCC0} = {0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}
+		{D786B63F-F442-44DB-B2AA-7BCCEFEFB4CF} = {0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}
+		{A1CE7703-40BC-4EA0-9542-5AE875EBC53E} = {0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}
+		{AE9218F5-6DF7-4301-B0A0-E9438F12CF83} = {0A6309B9-76E1-4A39-9C8C-391ABE83A8D3}
+	EndGlobalSection
+EndGlobal
