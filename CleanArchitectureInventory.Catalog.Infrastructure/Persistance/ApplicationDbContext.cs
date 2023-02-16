@@ -3,26 +3,23 @@ using System.Reflection;
 using CleanArchitectureInventory.Catalog.Application.Common.Abstractions;
 using CleanArchitectureInventory.Catalog.Domain.Entities;
 using CleanArchitectureInventory.Catalog.Infrastructure.Common;
-using CleanArchitectureInventory.Catalog.Infrastructure.Identity;
 using CleanArchitectureInventory.Catalog.Infrastructure.Persistance.Interceptors;
-using Duende.IdentityServer.EntityFramework.Options;
 using MediatR;
-using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace CleanArchitectureInventory.Catalog.Infrastructure.Persistance
 {
-    public class ApplicationDbContext :ApiAuthorizationDbContext<ApplicationUser>,  IApplicaitonDbContext
+    public class ApplicationDbContext :DbContext,  IApplicaitonDbContext
     {
         private readonly IMediator _mediator;
         private readonly AuditableEntitySaveChangeInterceptor _auditableEntitySaveChangeInterceptor;
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
-                                    IOptions<OperationalStoreOptions> operationalStoreOptions,
+        public ApplicationDbContext(
+                                    DbContextOptions<ApplicationDbContext> options,
                                     IMediator mediator,
                                     AuditableEntitySaveChangeInterceptor auditableEntitySaveChangeInterceptor
-            ):base(options,operationalStoreOptions)
+            ):base(options)
                                     
         {
             _mediator = mediator;
