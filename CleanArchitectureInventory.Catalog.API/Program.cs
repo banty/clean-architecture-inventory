@@ -27,7 +27,7 @@ if (app.Environment.IsDevelopment())
     {
         var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitializer>();
         await initialiser.InitializeAsyn();
-        await initialiser.SeedAsync();
+       // await initialiser.SeedAsync();
     }
 }
 
@@ -37,7 +37,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthentication();
-app.UseIdentityServer();
+//app.UseIdentityServer();
 app.UseAuthorization();
 
 app.MapControllers();
