@@ -9,12 +9,12 @@ namespace CleanArchitectureInventory.Catalog.Application.Common.Mappings
     public static class MappingExtensions
     {
 
-        public static Task<PagenatedList<T>> PagenatedListAsync<T>(this IQueryable<T> quarable, int pageNumber, int pageSize) where T : class
-                => PagenatedList<T>.CreatePagenatedListAsync(quarable.AsNoTracking(), pageSize, pageNumber);
+        public static Task<PaginatedList<T>> PaginatedListAsync<T>(this IQueryable<T> queryable, int pageNumber, int pageSize) where T : class
+                => PaginatedList<T>.CreatePaginatedListAsync(queryable.AsNoTracking(), pageSize, pageNumber);
 
-        public static Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable quarable,IConfigurationProvider configuration) where TDestination : class
+        public static Task<List<TDestination>> ProjectToListAsync<TDestination>(this IQueryable queryable,IConfigurationProvider configuration) where TDestination : class
 
-            => quarable.ProjectTo<TDestination>(configuration).AsNoTracking().ToListAsync();
+            => queryable.ProjectTo<TDestination>(configuration).AsNoTracking().ToListAsync();
 
 
     }

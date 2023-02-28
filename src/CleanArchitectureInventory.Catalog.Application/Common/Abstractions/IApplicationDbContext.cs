@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitectureInventory.Catalog.Application.Common.Abstractions
 {
-    public interface IApplicaitonDbContext
+    public interface IApplicationDbContext
     {
         DbSet<Product> Products { get; }
 

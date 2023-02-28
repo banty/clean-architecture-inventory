@@ -19,10 +19,10 @@ namespace CleanArchitectureInventory.Catalog.Application.Products.Commands
 
     public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, int>
     {
-        private readonly IApplicaitonDbContext _context;
+        private readonly IApplicationDbContext _context;
         private readonly IPublishEndpoint _publishEndPoint;
 
-        public UpdateProductCommandHandler(IApplicaitonDbContext context,
+        public UpdateProductCommandHandler(IApplicationDbContext context,
             IPublishEndpoint publishEndpoint)
         {
             _context = context;

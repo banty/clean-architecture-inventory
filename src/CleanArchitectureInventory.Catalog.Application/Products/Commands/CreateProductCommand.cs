@@ -16,10 +16,10 @@ namespace CleanArchitectureInventory.Catalog.Application.Products.Commands
 
     public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
     {
-        private readonly IApplicaitonDbContext _context;
+        private readonly IApplicationDbContext _context;
         private readonly IBus _publishEndPoint;
 
-        public CreateProductCommandHandler(IApplicaitonDbContext context,
+        public CreateProductCommandHandler(IApplicationDbContext context,
             IBus publishEndpoint)
         {
             _context = context;

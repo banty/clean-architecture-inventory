@@ -10,7 +10,7 @@ using Microsoft.Extensions.Options;
 
 namespace CleanArchitectureInventory.Catalog.Infrastructure.Persistance
 {
-    public class ApplicationDbContext :DbContext,  IApplicaitonDbContext
+    public class ApplicationDbContext :DbContext,  IApplicationDbContext
     {
         private readonly IMediator _mediator;
         private readonly AuditableEntitySaveChangeInterceptor _auditableEntitySaveChangeInterceptor;

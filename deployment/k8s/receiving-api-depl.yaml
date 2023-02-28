@@ -6,11 +6,11 @@ spec:
   replicas: 0
   selector:
     matchLabels:
-      name: receiving-api
+      app: receiving-api
   template:
     metadata:
       labels:
-        name: receiving-api
+        app: receiving-api
     spec:
       containers:
         - image: banty/clean.inventory.receiving.api:latest
@@ -28,7 +28,7 @@ metadata:
   name: receiving-api
 spec:
   selector:
-      name: receiving-api
+      app: receiving-api
   ports:
     - port: 80
   type: LoadBalancer

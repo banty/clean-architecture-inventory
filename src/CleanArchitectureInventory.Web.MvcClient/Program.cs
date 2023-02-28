@@ -7,30 +7,31 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
+builder.Services.AddAuthentication();
+///TODO: To be added after service running 
+// builder.Services.AddAuthentication(options =>
+// {
+//     options.DefaultScheme = "Cookies";
+//     options.DefaultChallengeScheme = "oidc";
+// })
+// .AddCookie("Cookies")
+// .AddOpenIdConnect("oidc", options =>
+// {
+//     options.ClientId = "mvcclient";
+//     options.Authority = "https://localhost:5001";
+//     options.SignedOutRedirectUri = "https://localhost:5002";
+//     options.ClientSecret = "secret";
+//     options.ResponseType = "code";
+//     options.Scope.Clear();
+//     options.Scope.Add("openid");
+//     options.Scope.Add("profile");
+//     options.Scope.Add("catalogs");
+//     options.ClaimActions.MapJsonKey("email_verified", "email_verified");
+//     options.GetClaimsFromUserInfoEndpoint = true;
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultScheme = "Cookies";
-    options.DefaultChallengeScheme = "oidc";
-})
-.AddCookie("Cookies")
-.AddOpenIdConnect("oidc", options =>
-{
-    options.ClientId = "mvcclient";
-    options.Authority = "https://localhost:5001";
-    options.SignedOutRedirectUri = "https://localhost:5002";
-    options.ClientSecret = "secret";
-    options.ResponseType = "code";
-    options.Scope.Clear();
-    options.Scope.Add("openid");
-    options.Scope.Add("profile");
-    options.Scope.Add("catalogs");
-    options.ClaimActions.MapJsonKey("email_verified", "email_verified");
-    options.GetClaimsFromUserInfoEndpoint = true;
+//     options.SaveTokens = true;
 
-    options.SaveTokens = true;
-
-});
+// });
 
 var app = builder.Build();
 

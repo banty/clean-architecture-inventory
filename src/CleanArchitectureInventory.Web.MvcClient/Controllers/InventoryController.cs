@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectureInventory.Web.MvcClient.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class InventoryController : Controller
     {
         // GET: /<controller>/

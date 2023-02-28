@@ -22,7 +22,7 @@ namespace CleanArchitectureInventory.Catalog.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<PagenatedList<ProductDto>>> GetProductsWithPagination([FromQuery] ProductWithPagenatedListQuery query)
+        public async Task<ActionResult<PaginatedList<ProductDto>>> GetProductsWithPagination([FromQuery] ProductWithPaginatedListQuery query)
         {
             return await Mediator.Send(query);
         }
@@ -31,12 +31,6 @@ namespace CleanArchitectureInventory.Catalog.API.Controllers
         public async Task<ActionResult<int>> CreateProduct(CreateProductCommand command)
         {
            
-            //await _bus.Publish<ProductCreated>(new
-            //{
-            //    Id = 1,
-            //    Name = command.Name,
-            //    CommandId = Guid.NewGuid().ToString()
-            //}); 
             return await Mediator.Send(command);
         }
 

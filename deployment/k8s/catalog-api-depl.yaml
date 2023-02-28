@@ -5,12 +5,12 @@ metadata:
 spec: 
   selector:
     matchLabels:
-      name: catalog-api
+      app: catalog-api
   replicas: 0
   template:
     metadata:
       labels:
-        name: catalog-api
+        app: catalog-api
     spec:
       containers:
       - name: catalog-api
@@ -28,9 +28,7 @@ metadata:
   name: catalog-api
 spec:
   selector:
-    name: catalog-api
+    app: catalog-api
   ports:
   - port: 80
   type: LoadBalancer
-
-

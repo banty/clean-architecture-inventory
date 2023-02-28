@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitectureInventory.Catalog.Application.Common.Models
 {
-    public class PagenatedList<T> 
+    public class PaginatedList<T> 
     {
-        public PagenatedList(List<T> items,int pageNumber,int pageSize,int count)
+        public PaginatedList(List<T> items,int pageNumber,int pageSize,int count)
         {
             Items = items;
             PageNumber = pageNumber;
@@ -22,13 +22,13 @@ namespace CleanArchitectureInventory.Catalog.Application.Common.Models
 
         public bool HasNextPage => PageNumber < TotalPages;
 
-        public static async Task<PagenatedList<T>> CreatePagenatedListAsync(IQueryable<T> source,int pageSize,int pageNumber)
+        public static async Task<PaginatedList<T>> CreatePaginatedListAsync(IQueryable<T> source,int pageSize,int pageNumber)
         {
             int count = source.Count();
             var items = await source.Skip((pageNumber-1) * pageSize).Take(pageSize).ToListAsync();
 
 
-            return new PagenatedList<T>(items, pageNumber, pageSize, count);
+            return new PaginatedList<T>(items, pageNumber, pageSize, count);
 
 
         }

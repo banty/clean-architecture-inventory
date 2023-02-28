@@ -17,9 +17,9 @@ namespace CleanArchitectureInventory.Catalog.Application.Products.Commands
 
     public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand>
     {
-        private readonly IApplicaitonDbContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public DeleteProductCommandHandler(IApplicaitonDbContext context)
+        public DeleteProductCommandHandler(IApplicationDbContext context)
         {
             _context = context;
         }

@@ -15,20 +15,13 @@ namespace CleanArchitectureInventory.Catalog.Infrastructure
         {
             services.AddScoped<AuditableEntitySaveChangeInterceptor>();
 
-            //if (configuration["UseInMemoryDb"]=="True")
-            //{
-            //    services.AddDbContext<ApplicationDbContext>(options =>
-            //        options.UseInMemoryDatabase("CleanArchInventoryDb")
-            //    ) ;
-            //}
-            //else
-            //{
+            
                 services.AddDbContext<ApplicationDbContext>(options =>
                    options.UseSqlServer(configuration.GetConnectionString("CleanArchInventory"),
                    builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName))
                 ); 
-            //}
-            services.AddScoped<IApplicaitonDbContext>(service => service.GetRequiredService<ApplicationDbContext>());
+            
+            services.AddScoped<IApplicationDbContext>(service => service.GetRequiredService<ApplicationDbContext>());
             services.AddScoped<ApplicationDbContextInitializer>();
             services.AddTransient<IDateTime, DateTimeService>();
 

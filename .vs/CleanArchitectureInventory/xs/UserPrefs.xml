@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{D52CF902-8448-437B-B13E-EED35FBD4B02}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.src.GoodsReceiving.CleanArchitectureInventory.Receiving.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CleanArchitectureInventory" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.src.Catalog.CleanArchitectureInventory.Catalog.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.src.Web.ClientArchitectureInventory.Web.WebClient PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.src.Identity.CleanArchitectureInventory.Identity.IdentityServerAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <DisabledProjects>
+    <String>CleanArchitectureInventory.Web.Client/SampleClient/SampleClient.csproj</String>
+    <String>CleanArchitectureInventory.Web.MvcClient/ClientArchitectureInventory.Web.WebClient/ClientArchitectureInventory.Web.WebClient.csproj</String>
+  </DisabledProjects>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{53D53496-1B9D-4C13-B165-0D72254B0E71}" ItemName="CleanArchitectureInventory.Catalog.API" ConfigurationId="Default" />
+        <StartupItem ItemId="{D52CF902-8448-437B-B13E-EED35FBD4B02}" ItemName="CleanArchitectureInventory.Receiving.API" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>
