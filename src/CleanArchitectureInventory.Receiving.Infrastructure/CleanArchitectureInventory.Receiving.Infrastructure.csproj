@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\" />
+    <None Remove="Persistance\" />
+    <None Remove="Persistance\Configurations\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Persistance\Interceptors\" />
+    <None Remove="Services\" />
+    <None Remove="Persistance\Migrations\" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Persistance\" />
+    <Folder Include="Persistance\Configurations\" />
+    <Folder Include="Persistance\Interceptors\" />
+    <Folder Include="Services\" />
+    <Folder Include="Persistance\Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectureInventory.Receiving.Applicaiton\CleanArchitectureInventory.Receiving.Applicaiton.csproj" />
+    <ProjectReference Include="..\CleanArchitectureInventory.Receiving.Domain\CleanArchitectureInventory.Receiving.Domain.csproj" />
+  </ItemGroup>
+</Project>

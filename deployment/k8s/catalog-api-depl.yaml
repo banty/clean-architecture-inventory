@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: catalog-api
+spec: 
+  selector:
+    matchLabels:
+      name: catalog-api
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        name: catalog-api
+    spec:
+      containers:
+      - name: catalog-api
+        image: banty/clean.inventory.catalog.api
+        resources:
+          limits:
+            memory: "121Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog-api
+spec:
+  selector:
+    name: catalog-api
+  ports:
+  - port: 80
+  type: LoadBalancer
+
+
